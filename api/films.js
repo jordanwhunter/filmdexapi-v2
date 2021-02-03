@@ -46,8 +46,8 @@ connectDB();
 module.exports = (req, res) => {
   if (req.method === 'GET') {
     Film.find()
-    .then(people => {
-      res.status(200).json(people)
+    .then(films => {
+      res.status(200).json(films)
     })
     .catch(error => res.status(204).json(error.message))
   }
