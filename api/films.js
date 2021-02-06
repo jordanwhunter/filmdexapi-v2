@@ -47,8 +47,8 @@ module.exports = (req, res) => {
   if (req.method === 'GET') {
     Film.find()
     .then(films => {
-      res.status(200).json(films)
+      return res.status(200).json(films)
     })
     .catch(error => res.status(204).json(error.message))
-  }
+  } 
 };
