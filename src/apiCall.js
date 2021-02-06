@@ -1,0 +1,2 @@
+const api = '/api/films';
+
