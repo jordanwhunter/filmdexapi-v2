@@ -28,61 +28,50 @@
     grid-gap: 8px;
   }
 
+  .italic {
+    font-style: italic;
+  }
+
+  .lighter {
+    font-weight: lighter;
+  }
+
   figure, img {
     width: 100%;
     margin: 0;
     font-size: small;
     font-style: italic;
   }
-
-  
 </style>
 
 <main>
   <section>
     <div>
-      <h2>The Film API</h2>
-      <h3>The RESTful Camera Film API</h3>
-      <h5>Cataloging 130 different 35mm / 120 format film types and counting!</h5>
+      <h2>
+        The Film API
+        <br>
+        <span class='italic lighter'>
+          The RESTful Camera Film API
+        </span>
+      </h2>
+      <h5 class='italic'>
+        Cataloging 130 different 35mm / 120 format film types and counting!
+      </h5>
     </div>
   </section>
   <section>
-    <h2>
-    Deployed with
-      <a href='https://vercel.com/docs' target='_blank' rel='noreferrer noopener'>
-        Vercel
-      </a>!
-    </h2>
+    <h4 class='italic'>
+    Direct link to results: 
+      <a 
+        href='https://filmapi.vercel.app/api/films' 
+        target='_blank' 
+        rel='noreferrer noopener'
+      >
+        https://filmapi.vercel.app/api/films
+      </a>
+    </h4>
   </section>
-  <!-- <p>
-    <a
-      href='https://github.com/vercel/vercel/tree/master/examples/svelte'
-      target='_blank'
-      rel='noreferrer noopener'>
-      This project
-    </a>
-    is a
-    <a href='https://svelte.dev/'>Svelte</a>
-    app with three directories,
-    <code>/public</code>
-    for static assets,
-    <code>/src</code>
-    for components and content, and
-    <code>/api</code>
-    which contains a serverless
-    <a href='https://nodejs.org/en/'>Node.js</a>
-    function. See
-    <a href='/api/date'>
-      <code>api/date</code>
-      for the Date API with Node.js
-    </a>
-    .
-  </p> -->
   <br />
-  <!-- <section>
-    <h2>The date according to Node.js is:</h2>
-    <p>{date ? date : 'Loading date...'}</p>
-  </section> -->
   <section>
     <div class='container'>
       <div class='films'>
@@ -98,7 +87,8 @@
                 .split(' ')
                 .map(letter => letter.charAt(0).toUpperCase() + letter.substring(1))
                 .join(' ')
-              } 
+              }
+              <br />
               {film.name
                 .toLowerCase()
                 .split(' ')
