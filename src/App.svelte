@@ -4,7 +4,8 @@
   import Spinner from 'svelte-spinner';
   import Modal from './Modal.svelte';
   import Title from './Title.svelte';
-  import API from './apiLink.svelte';
+  import API from './ApiLink.svelte';
+  import About from './About.svelte';
 
   let films = [];
   let submissions = [];
@@ -152,9 +153,9 @@
       </div>
     </div>
   </section>
-  <section class='left-align'>
-    <h4 class='underline'>About</h4>
-    <h5>What is this?</h5>
+  <h4 class='underline left-align'>About</h4>
+  <About />
+    <!-- <h5>What is this?</h5>
     <p class='smaller'>
       This website provides a RESTful <span class='underline'>application programming interface</span> (API) to detailed objects related to photo camera film - both in 35mm format and 120 format. Using this website, you can consume information on camera film brands, a specific film's ISO, developing processes, key features, and more. 
     </p>
@@ -178,7 +179,8 @@
       <li>Image (500 x 500)</li>
       <li>Film Description</li>
       <li>Key Features</li>
-    </ul>
+    </ul> -->
+  <section class='left-align'>
     <h5>This API is missing film types that I'm familiar with!</h5>
     <p class='smaller'>
       We're fully aware! While we feel like we've already made decent progress of growing our database, we're just getting started! Feel free to contribute to open issues on <a href='https://github.com/jordanwhunter/filmdexapi-v2' target='_blank'>Github</a>. If you aren't a developer, but would still like to contribute, please click <button on:click={toggleModal}>here</button>
