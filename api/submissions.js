@@ -6,8 +6,6 @@ const typeBoolean = { type: Boolean };
 const typeReqString = { type: String, required: true, trim: true };
 const typeReqDate = { type: Date, required: true, default: Date.now };
 
-const keyFeaturesSchema = new mongoose.Schema({ feature: typeString });
-
 const dbUri = process.env.MONGODB_URI;
 
 let submissionSchema = new mongoose.Schema({
@@ -20,7 +18,6 @@ let submissionSchema = new mongoose.Schema({
   process: typeString,
   staticImageUrl: typeString,
   description: typeString,
-  keyFeatures: [keyFeaturesSchema],
   contributor: typeString,
   notes: typeString,
   dateAdded: typeReqDate
@@ -44,13 +41,7 @@ const connectDB = async () => {
 connectDB();
 
 module.exports = (req, res) => {
-  if (req.method === 'GET') {
-    Submission.find()
-    .then(submissions => {
-      return res.status(200).json(submissions)
-    })
-    .catch(error => res.status(204).json(error.message))
-  } else if (req.method === 'POST') {
+  if (req.method === 'POST') {
     const newSubmission = new Submission(req.body);
     newSubmission.save()
     .then(newSubmission => {
