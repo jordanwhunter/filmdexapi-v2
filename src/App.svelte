@@ -1,18 +1,29 @@
 <script>
   import { onMount } from 'svelte';
+  import { createItem, getJSON } from './apiCall';
+  import Spinner from 'svelte-spinner';
   import Modal from './Modal.svelte';
 
   let films = [];
+  let submissions = [];
   let showModal = false;
-
-  const toggleModal = () => {
-    showModal = !showModal
-  };
+  let createPromise = Promise.reject();
 
   onMount(async () => {
     const res = await fetch('/api/films');
     films = await res.json();
   });
+
+  const toggleModal = () => {
+    showModal = !showModal
+  };
+
+  const create = event => {
+    const item = getJSON(event)
+    createPromise = createItem(item)
+    .then(submissionRes => submissions = [submissionRes, ...submissions])
+    .then(() => Promise.reject())
+  };
 </script>
 
 <style>
@@ -62,7 +73,25 @@
   }
 </style>
 
-<Modal message='Form will go here' {showModal} on:click={toggleModal}/>
+<Modal {showModal} on:click={toggleModal}>
+  <h3>Submit a New Film Type</h3>
+  {#await createPromise}
+    <Spinner size='60' color='#8A2BE2' />
+  {:catch error}
+    {#if error}{error}{/if}
+    <form on:submit|preventDefault={create}>
+      <input type='text' name='brand' placeholder='Film Brand (Required)'><br>
+      <input type='text' name='name' placeholder='Film Model (Required)'><br>
+      <input type='number' name='iso' placeholder='ISO (Number)'><br>
+      <input type='text' name='process' placeholder='Process'><br>
+      <input type='text' name='staticImageUrl' placeholder='Image URL'><br>
+      <input type='text' name='description' placeholder='Film Description'><br>
+      <input type='text' name='contributor' placeholder='Your Name'><br>
+      <input type='text' name='notes' placeholder='Leave A Note...'><br><br>
+      <button>Submit</button>
+    </form>
+  {/await}
+</Modal>
 <main>
   <section>
       <h2>
@@ -148,7 +177,7 @@
     </ul>
     <h5>This API is missing film types that I'm familiar with!</h5>
     <p class='smaller'>
-      We're fully aware! While we feel like we've already made decent progress of growing our database, we're just getting started! Feel free to contribute to open issues on <a href='https://github.com/jordanwhunter/filmdexapi-v2' target='_blank'>Github</a>. If you aren't a developer, but would still like to contribute, please click this <button on:click={toggleModal}>button</button>
+      We're fully aware! While we feel like we've already made decent progress of growing our database, we're just getting started! Feel free to contribute to open issues on <a href='https://github.com/jordanwhunter/filmdexapi-v2' target='_blank'>Github</a>. If you aren't a developer, but would still like to contribute, please click <button on:click={toggleModal}>here</button>
     </p>
   </section>
 </main>
