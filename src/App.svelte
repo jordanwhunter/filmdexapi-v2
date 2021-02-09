@@ -3,6 +3,7 @@
   import { createItem, getJSON } from './apiCall';
   import Spinner from 'svelte-spinner';
   import Modal from './Modal.svelte';
+  import Title from './Title.svelte';
 
   let films = [];
   let submissions = [];
@@ -93,7 +94,8 @@
   {/await}
 </Modal>
 <main>
-  <section>
+  <Title />
+  <!-- <section>
       <h2>
         <span class='underline'>The Film API</span>
         <br>
@@ -102,7 +104,7 @@
           Cataloging 130+ different 35mm / 120 format film types and counting!
         </span>
       </h2>
-  </section>
+  </section> -->
   <section>
     <h4 class='italic'>
     Direct link to results: 
