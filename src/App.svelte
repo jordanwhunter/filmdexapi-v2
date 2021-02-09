@@ -18,7 +18,7 @@
     background: #fff;
     padding: 5px;
     border-radius: 6px; 
-    box-shadow: 0px 2px 4px rgba(0,0,0,0.1)
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.1);
   }
 
   .films {
@@ -59,15 +59,13 @@
 <main>
   <section>
       <h2>
-        The Film API
+        <span class='underline'>The Film API</span>
         <br>
-        <span class='italic lighter'>
-          A RESTful Camera Film API
+        <span class='italic smaller'>
+          A RESTful Camera Film API <br>
+          Cataloging 130+ different 35mm / 120 format film types and counting!
         </span>
       </h2>
-      <h5 class='italic'>
-        Cataloging 130+ different 35mm / 120 format film types and counting!
-      </h5>
   </section>
   <section>
     <h4 class='italic'>
@@ -118,7 +116,7 @@
     <h4 class='underline'>About</h4>
     <h5>What is this?</h5>
     <p class='smaller'>
-      This website provides a RESTful <span class='underline'>application programming interface</span> (API) to detailed objects related to photo camera film - both in 35mm format and 120 format. Using this website, you can consume information on camera film brands, a specific film's ISO, devloping processes, key features, and more. 
+      This website provides a RESTful <span class='underline'>application programming interface</span> (API) to detailed objects related to photo camera film - both in 35mm format and 120 format. Using this website, you can consume information on camera film brands, a specific film's ISO, developing processes, key features, and more. 
     </p>
     <h5>What is an API?</h5>
     <p class='smaller'>
@@ -127,7 +125,7 @@
     </p>
     <h5>How much information is here?</h5>
     <p class='smaller'>
-      The API is small, but growing! Currently, we've catalogged around 130 different types of applicable photo film. The items within our database include:
+      The API is small, but growing! Currently, we've catalogued around 130 different types of applicable photo film. The items within our database include:
     </p>
     <ul class='smaller'>
       <li>Brand Name</li>
