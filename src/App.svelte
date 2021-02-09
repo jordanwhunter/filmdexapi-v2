@@ -102,9 +102,9 @@
               <br />
               {film.name
                 .toLowerCase()
-                .split('-')
+                .split(' ')
                 .map(letter => letter.charAt(0).toUpperCase() + letter.substring(1))
-                .join('-')
+                .join(' ')
               }
             </figcaption>
           </figure>
@@ -128,6 +128,7 @@
     <h5>How much information is here?</h5>
     <p class='smaller'>
       The API is small, but growing! Currently, we've catalogged around 130 different types of applicable photo film. The items within our database include:
+    </p>
     <ul class='smaller'>
       <li>Brand Name</li>
       <li>Film Model</li>
@@ -136,7 +137,7 @@
       <li>Availability in 120 format</li>
       <li>Black & White / Color Specification</li>
       <li>Photographic Processing Type</li>
-      <li>Image</li>
+      <li>Image (500 x 500)</li>
       <li>Film Description</li>
       <li>Key Features</li>
     </ul>
