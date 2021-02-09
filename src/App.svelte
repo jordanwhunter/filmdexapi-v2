@@ -62,11 +62,11 @@
         The Film API
         <br>
         <span class='italic lighter'>
-          The RESTful Camera Film API
+          A RESTful Camera Film API
         </span>
       </h2>
       <h5 class='italic'>
-        Cataloging 130 different 35mm / 120 format film types and counting!
+        Cataloging 130+ different 35mm / 120 format film types and counting!
       </h5>
   </section>
   <section>
@@ -83,6 +83,7 @@
   </section>
   <br />
   <section>
+    <p class='smaller'>(Scroll for overview of API's contents)</p>
     <div class='container'>
       <div class='films'>
         {#each films as film}
@@ -127,18 +128,21 @@
     <h5>How much information is here?</h5>
     <p class='smaller'>
       The API is small, but growing! Currently, we've catalogged around 130 different types of applicable photo film. The items within our database include:
-      <ul class='smaller'>
-        <li>Brand Name</li>
-        <li>Film Model</li>
-        <li>ISO</li>
-        <li>Availability in 35mm</li>
-        <li>Availability in 120 format</li>
-        <li>Black & White / Color Specification</li>
-        <li>Photographic Processing Type</li>
-        <li>Image</li>
-        <li>Film Description</li>
-        <li>Key Features</li>
-      </ul>
-    <!-- </p> -->
+    <ul class='smaller'>
+      <li>Brand Name</li>
+      <li>Film Model</li>
+      <li>ISO</li>
+      <li>Availability in 35mm</li>
+      <li>Availability in 120 format</li>
+      <li>Black & White / Color Specification</li>
+      <li>Photographic Processing Type</li>
+      <li>Image</li>
+      <li>Film Description</li>
+      <li>Key Features</li>
+    </ul>
+    <h5>This API is missing film types that I'm familiar with!</h5>
+    <p class='smaller'>
+      We're fully aware! While we feel like we've already made decent progress of growing our database, we're just getting started! Feel free to contribute to open issues on <a href='https://github.com/jordanwhunter/filmdexapi-v2' target='_blank'>Github</a>. If you aren't a developer, but would still like to contribute, please fill out the form provided below:
+    </p>
   </section>
 </main>
