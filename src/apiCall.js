@@ -9,10 +9,6 @@ export const getJSON = event => {
   return Object.fromEntries((new FormData(event.target)).entries())
 };
 
-export const readItems = () => {
-  return fetch(api).then(handleResponse)
-};
-
 export const createItem = item => {
   return fetch(api, {
     method: 'POST',
