@@ -4,6 +4,7 @@
   import Spinner from 'svelte-spinner';
   import Modal from './Modal.svelte';
   import Title from './Title.svelte';
+  import API from './apiLink.svelte';
 
   let films = [];
   let submissions = [];
@@ -105,7 +106,8 @@
         </span>
       </h2>
   </section> -->
-  <section>
+  <API />
+  <!-- <section>
     <h4 class='italic'>
     Direct link to results: 
       <a 
@@ -116,7 +118,7 @@
         https://filmapi.vercel.app/api/films
       </a>
     </h4>
-  </section>
+  </section> -->
   <br />
   <section>
     <p class='smaller'>(Scroll for overview of API's contents)</p>
