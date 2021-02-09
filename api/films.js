@@ -36,7 +36,7 @@ const connectDB = async () => {
       useNewUrlParser: true,
       useFindAndModify: false
     });
-    console.log('Connected To Your Mongo Database!')
+    console.log('Connected To MongoDB For Film Types!')
   } catch (error) {
     console.log(error);
   }
