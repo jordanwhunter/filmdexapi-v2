@@ -1,6 +1,5 @@
 <script>
   export let showModal = false;
-  export let message;
 </script>
 
 <style>
@@ -24,9 +23,9 @@
 </style>
 
 {#if showModal}
-  <section class='backdrop' on:click>
+  <section class='backdrop' on:click|self>
     <div class='modal'>
-      <p>{message}</p>
+      <slot></slot>
     </div>
   </section>
 {/if}
