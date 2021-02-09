@@ -1,7 +1,13 @@
 <script>
   import { onMount } from 'svelte';
-  
+  import Modal from './Modal.svelte';
+
   let films = [];
+  let showModal = false;
+
+  const toggleModal = () => {
+    showModal = !showModal
+  };
 
   onMount(async () => {
     const res = await fetch('/api/films');
@@ -56,6 +62,7 @@
   }
 </style>
 
+<Modal message='Form will go here' {showModal} on:click={toggleModal}/>
 <main>
   <section>
       <h2>
@@ -121,7 +128,7 @@
     <h5>What is an API?</h5>
     <p class='smaller'>
       An <span class='underline'>application programming interface</span> (API) is a computing interface that defines interactions between multiple software intermediaries. It defines the kinds of calls or requests that can be made, how to make them, the data formats that should be used, the conventions to follow, etc. In this case, the application is a database of camera film types, and the interface is a URL link. <br><br>
-      A RESTful API, or a <span class='underline'>representational state transfer application programming interface</span>, is one that conforms to the constraints of HTTP(S) parameters.
+      A RESTful API, or a <span class='underline'>representational state transfer</span> API, is one that conforms to the constraints of HTTP(S) parameters.
     </p>
     <h5>How much information is here?</h5>
     <p class='smaller'>
@@ -141,7 +148,7 @@
     </ul>
     <h5>This API is missing film types that I'm familiar with!</h5>
     <p class='smaller'>
-      We're fully aware! While we feel like we've already made decent progress of growing our database, we're just getting started! Feel free to contribute to open issues on <a href='https://github.com/jordanwhunter/filmdexapi-v2' target='_blank'>Github</a>. If you aren't a developer, but would still like to contribute, please fill out the form provided below:
+      We're fully aware! While we feel like we've already made decent progress of growing our database, we're just getting started! Feel free to contribute to open issues on <a href='https://github.com/jordanwhunter/filmdexapi-v2' target='_blank'>Github</a>. If you aren't a developer, but would still like to contribute, please click this <button on:click={toggleModal}>button</button>
     </p>
   </section>
 </main>
