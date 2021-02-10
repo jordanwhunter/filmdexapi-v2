@@ -128,7 +128,7 @@
     <About />
     <h5>This API is missing film types that I'm familiar with!</h5>
     <p class='smaller'>
-      We're fully aware! While we feel like we've already made decent progress of growing our database, we're just getting started! Feel free to contribute to open issues on <a href='https://github.com/jordanwhunter/filmdexapi-v2' target='_blank'>Github</a>. If you aren't a developer, but would still like to contribute, please click <button on:click={toggleModal}>here</button> please note: submitting a film type does not guarantee that it will be added to the API's database. 
+      We're fully aware! While we feel like we've already made decent progress of growing our database, we're just getting started! Feel free to contribute to open issues on <a href='https://github.com/jordanwhunter/filmdexapi-v2' target='_blank'>Github</a>. If you aren't a developer, but would still like to contribute, please click <button on:click={toggleModal}>here</button> <span class='underline'>(note: submitting a film type does not guarantee that it will be added to the API's database).</span> 
     </p>
   </div>
 </main>
