@@ -4,7 +4,7 @@
   import Spinner from 'svelte-spinner';
   import Modal from './Modal.svelte';
   import Title from './Title.svelte';
-  import API from './ApiLink.svelte';
+  import API from './apiLink.svelte';
   import About from './About.svelte';
 
   let films = [];
