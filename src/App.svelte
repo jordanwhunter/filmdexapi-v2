@@ -82,7 +82,7 @@
       <input type='text' name='staticImageUrl' placeholder='Image URL'><br>
       <input type='text' name='description' placeholder='Film Description'><br>
       <input type='text' name='contributor' placeholder='Your Name'><br>
-      <input type='text' name='notes' placeholder='Leave A Note...'><br><br>
+      <input type='text' name='notes' placeholder='Leave a Note...'><br><br>
       <button>Submit</button>
     </form>
   {/await}
