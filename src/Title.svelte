@@ -3,26 +3,12 @@
 </script>
 
 <style>
-  .italic {
-    font-style: italic;
-  }
-
-  .smaller {
-    font-size: small;
-  }
-
-  .underline {
-    text-decoration: underline;
+  img {
+    align-items: center;
+    width: 700px;
   }
 </style>
 
 <section>
-  <h2>
-    <span class='underline'>The Film API</span>
-    <br>
-    <span class='italic smaller'>
-      A RESTful Camera Film API <br>
-      Cataloging 130+ different 35mm / 120 format film types and counting!
-    </span>
-  </h2>
+  <img src="https://user-images.githubusercontent.com/69367907/110386040-c57b2e00-802d-11eb-977a-a39ed6839ec3.png" alt="The Film API" />
 </section>
