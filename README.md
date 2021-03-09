@@ -42,7 +42,7 @@
   ## Installation
   This application was built with ```React```. If initiating build, make sure to launch the **front-end** using ```npx create-react-app <project-name>```.
   
-  If cloning to personal machine, open repository in terminal and ```cd client```. From there, run ```npm install``` to install all modules listed within the ```package.json``` file. The ```API``` folder contains the back-end code for deploying the API's routes to ```Vercel```.<br>
+  If cloning to personal machine, open repository in terminal and ```cd filmapi```. From there, run ```npm install``` to install all modules listed within the ```package.json``` file. The ```API``` folder contains the back-end code for deploying the API's routes to ```Vercel```.<br>
   <br>
 
   Individual modules to be installed **(front-end)**:<br>
