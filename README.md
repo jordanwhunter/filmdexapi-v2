@@ -14,7 +14,7 @@
   
   **NOTE: This is the Vercel-powered PRODUCTION version of The Film API. To view the repository for the DEVELOPERS version, click <a href="https://github.com/jordanwhunter/filmdex-api" target="_blank">here</a>**.<br>
   <br>
-  An API build structured with ```Node```, ```Express```, and ```MongoDB```, along with ```Svelte``` for front-end stylings on the landing page (which consumes the API). Search film available types <a href="https://filmapi.vercel.app/" target="_blank">here</a>. Visitors to the page can also submit new film types for consideration. Each film type catalogued contains certain criteria to be utilized at the user's discretion:<br>
+  An API build structured with ```Node```, ```Express```, and ```MongoDB```, along with ```Svelte``` for front-end stylings on the landing page (which consumes the API). Search available film types <a href="https://filmapi.vercel.app/" target="_blank">here</a>. Visitors to the page can also submit new film types for consideration. Each film type catalogued contains certain criteria to be utilized at the user's discretion:<br>
   * Film Brand (String)
   * Film Name (String)
   * ISO (Integer)
