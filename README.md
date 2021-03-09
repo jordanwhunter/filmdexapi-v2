@@ -27,7 +27,7 @@
   * Key Features (Array of Objects)
   <br>
   <p align="center">
-    <img src="https://user-images.githubusercontent.com/69367907/110392640-3ffc7b80-8037-11eb-877f-cded4f2afdd1.png">
+    <img src="https://user-images.githubusercontent.com/69367907/110512610-5b1cc900-80d3-11eb-8d70-fa9dc41db39d.png">
   </p>
   
   
