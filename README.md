@@ -42,7 +42,7 @@
   ## Installation
   This application was built with ```Svelte``` on the front-end and ```Vercel``` on the back-end. If initiating build, make sure to initialize using ```vercel init svelte <project-name>```.
   
-  If cloning to personal machine, open repository in terminal and ```cd filmapi```. From there, run ```npm install``` to install all modules listed within the ```package.json``` file. The ```API``` folder contains the back-end code for deploying the API's routes to ```Vercel```.<br>
+  If cloning to personal machine, open repository in terminal and ```cd``` into your root. From there, run ```npm install``` to install all modules listed within the ```package.json``` file. The ```API``` folder contains the back-end code for deploying the API's routes to ```Vercel```.<br>
   <br>
 
   Individual modules to be installed **(front-end)**:<br>
